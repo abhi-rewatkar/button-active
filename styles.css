@@ -1,0 +1,49 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-button {
+    background-color:rgb(195, 68, 68);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+
+.info-box {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.center-button:active ~ .info-box {
+    display: block;
+    z-index: 2;
+    background-color: red;
+    width: 200px;
+    height: 150px;
+}
+
+.center-button:active {
+    display: none;
+}
